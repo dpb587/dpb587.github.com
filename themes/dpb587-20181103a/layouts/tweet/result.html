@@ -1,0 +1,20 @@
+<article class="media">
+  {{ range $media := .Params.extended_entities.media }}
+    <div class="media-left">
+      <figure class="image" style="width:128px;">
+        <img src="{{ $media.media_url_https }}">
+      </figure>
+    </div>
+  {{ end }}
+  <div class="media-content">
+    <div class="content">
+      <p>
+        <span><a href="https://twitter.com/dpb587"><i class="fa fa-twitter"></i> dpb587</a></span>
+        &nbsp; <span><a href="{{ .URL }}"><i class="fa fa-calendar"></i> {{ dateFormat "January 2, 2006" .Date }}</a></span>
+        {{ with .Params.place }}&nbsp; <span><span class="has-text-grey"><i class="fa fa-map-marker"></i></span> {{ .full_name }}<span>{{ end }}
+        <br>
+        <span>{{ safeHTML .Summary }}</span>
+      </p>
+    </div>
+  </div>
+</article>

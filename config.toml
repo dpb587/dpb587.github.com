@@ -23,6 +23,7 @@ paginate = "256"
   page = "/:slug/"
   gallery = "/gallery/:slug/"
   photo = "/photo/:year/:month/:day/:slug/"
+  tweet = "/tweet/:filename/"
 
 [[menu.main]]
   name = "about"
